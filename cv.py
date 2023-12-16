@@ -82,20 +82,6 @@ while(True):
             cv2.imshow("food", image) 
             time.sleep(1)
         cv2.imshow("video", frame) 
-        """
-        tarelka = cv2.resize(frame[0:300,0:340,:],(224,224))
-        print("тарелка = ")
-        mmm = model.predict(np.reshape(tarelka,(1,224,224,3)))
-        print_class(mmm)
-        print("кружка = ")
-        #cv2.imshow('two_tarelka', frame[240:480, 340: 640,:])
-        #tarelka2 = cv2.resize(frame[0:240,0:340,:],(224,224))
-        #ynew = model.predict_classes(tarelka2)
-        cv2.imshow('kryzhka', frame[120:480, 300:600,:])
-        kryzhka = cv2.resize(frame[120:480, 300:600,:],(224,224))
-        hhhh = model.predict(np.reshape(kryzhka,(1,224,224,3)))
-        print_class(hhhh)
-        """
     if cv2.waitKey(33) == ord('q'):
         break
 # When everything done, release the capture
